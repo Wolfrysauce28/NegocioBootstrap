@@ -1,0 +1,93 @@
+/* Variables de Marca: Aquí definimos los colores una sola vez */
+:root {
+    --color-dark: #0b0f19;
+    /* El azul oscuro de nuestro logo */
+    --color-lime: #ccff00;
+    /* El verde lima de nuestro logo */
+    --color-light: #ffffff;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* Clases personalizadas de Cofre Importaciones */
+.bg-dark-custom {
+    background-color: var(--color-dark) !important;
+    color: var(--color-light);
+}
+
+.text-lime {
+    color: var(--color-lime) !important;
+}
+
+.bg-lime {
+    background-color: var(--color-lime) !important;
+    color: var(--color-dark);
+}
+
+.btn-lime {
+    background-color: var(--color-lime);
+    color: var(--color-dark);
+    font-weight: bold;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-lime:hover {
+    background-color: #b3e600;
+    /* Un tono más oscuro para el efecto visual */
+    color: var(--color-dark);
+    transform: translateY(-2px);
+    /* Pequeña animación al pasar el mouse */
+}
+
+/* Estilos para la barra de navegación */
+.navbar-brand {
+    font-size: 1.8rem;
+}
+
+.nav-link:hover {
+    color: var(--color-lime) !important;
+}
+
+/* Separador sutil para las secciones oscuras */
+.border-top-custom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/* --- Estilos para el Acordeón de Preguntas Frecuentes --- */
+
+/* 1. Fondo y texto de cada elemento del acordeón */
+.accordion-item {
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    border-color: rgba(255, 255, 255, 0.1);
+    /* Borde sutil entre preguntas */
+}
+
+/* 2. Estilo del botón (la pregunta en sí) */
+.accordion-button {
+    background-color: var(--color-dark);
+    color: var(--color-light);
+}
+
+/* 3. Estilo del botón cuando la pregunta está ABIERTA */
+.accordion-button:not(.collapsed) {
+    background-color: var(--color-dark);
+    color: var(--color-lime);
+    /* Resaltamos el texto en verde lima al abrir */
+    box-shadow: none;
+    /* Quitamos la sombra azul por defecto de Bootstrap */
+}
+
+/* 4. Quitar el borde azul molesto al hacer clic */
+.accordion-button:focus {
+    box-shadow: none;
+}
+
+/* 5. Volver blanca la flechita (chevron) para que se vea sobre el fondo oscuro */
+.accordion-button::after {
+    filter: invert(1);
+}

@@ -14,7 +14,7 @@ body {
 /* Clases personalizadas de Cofre Importaciones */
 .bg-dark-custom {
     background-color: #0b0f19;
-    color:  #ffffff;
+    color: #ffffff;
 }
 
 .text-lime {
@@ -33,13 +33,16 @@ body {
 .card {
     height: 100%;
 }
+
 .card-body {
     display: flex;
     flex-direction: column;
 }
+
 .card .btn {
     margin-top: auto;
 }
+
 .card-img-top {
     height: 200px;
     object-fit: cover;
